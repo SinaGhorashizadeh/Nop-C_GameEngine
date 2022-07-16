@@ -1,0 +1,103 @@
+
+<Editor>
+    FloatLayout:
+        size: root.width, root.height
+        Label:
+            text: 'TopBar'
+            pos_hint: {'x':0, 'top':1}
+            size_hint: (1,0.05)
+            id: label
+            canvas.before:
+                Color:
+                    rgba: (25/255,25/255,25/255,1)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        Label:
+            id: label2
+            text: 'inspector'
+            pos_hint: {'right':1, 'top':0.95}
+            size_hint: (0.2,1)
+            canvas.before:
+                Color:
+                    rgba: (82/255, 72/255, 82/255,1)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        
+        Label:
+            id: Console
+            text: 'console'
+            pos_hint: {'x': 0.2,'bottom':1}
+            size_hint: (0.6,0.3)
+            canvas.before:
+                Color:
+                    rgba: (80/255, 62/255, 82/255,1)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+
+        Label:
+            id: Hierarchy:
+            text: 'hierarchy'
+            pos_hint: {'left':1, 'top':0.95}
+            size_hint: (0.2,0.5)
+        
+        ScrollView:
+            id: scroll
+            do_scroll_x: False
+            do_scroll_y: True
+
+            BoxLayout:
+                id: box
+                cols: 1
+                orientation: 'vertical'
+                size_hint: (1,None)
+                height: self.minimum_height
+                Label:
+                    text: '1'
+
+                Label:
+                    text: '2'
+
+                Label:
+                    text: '3'
+
+                Label:
+                    text: '4'
+        
+                Label:
+                    text: '5'    
+                Label:
+                    text: '6' 
+                Label:
+                    text: '7' 
+                Label:
+                    text: '8' 
+                Label:
+                    text: '9' 
+                Label:
+                    text: '10' 
+                Label:
+                    text: '11' 
+                Label:
+                    text: '12'        
+
+        Button:
+            text: 'fileSystem'
+            pos_hint: {'left':1, 'down':0}
+            size_hint: (0.2,0.5)
+
+        Label:
+            text: 'Scene'
+            pos_hint: {'x': 0.2, 'top':0.95}
+            size_hint: (0.6,0.7)
+            id: label
+            canvas.before:
+                Color:
+                    rgba: (82/255, 82/255, 82/255,1)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
